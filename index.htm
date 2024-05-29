@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbo.az</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <!--M O B I L E   H E A D E R -->
+        <div id="saytlar">
+            <div id="saytlar-mobile">
+                <div id="saytlar-ad">
+                    <h3 id="turbo">TURBO.AZ</h3>
+                    <h3>BINA.AZ</h3>
+                    <h3>TAP.AZ</h3>
+                </div>
+                <div id="elan-yerlesdir">
+                    <a href=""><i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+            <div id="filter-mobile">
+                <div id="filter-mobile-container" class="container">
+                    <div id="markalar-mobile" onclick="allMarka()">
+                        <div id="markalar-mobile-ad">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="23" viewBox="-5 -5 29 23" x="675"
+                                y="340">
+                                <path
+                                    d="M18.89 4.023a.495.495 0 00-.376-.174h-1.85c-.456-1.164-1.05-2.304-1.726-2.734-2.337-1.487-8.538-1.487-10.875 0-.676.43-1.269 1.572-1.727 2.734H.486a.492.492 0 00-.376.174.456.456 0 00-.1.392l.274 1.283a.483.483 0 00.476.375h.548A3.113 3.113 0 00.52 8.148c-.004.918.357 1.748 1.016 2.335.007.006.015.01.021.016v1.796c0 .388.327.705.73.705h1.706a.72.72 0 00.73-.705v-.722h9.554v.722c0 .388.327.705.73.705h1.706a.72.72 0 00.73-.705v-1.76a3.094 3.094 0 001.038-2.323 3.107 3.107 0 00-.825-2.14h.584a.48.48 0 00.476-.376l.275-1.282a.462.462 0 00-.1-.391zM4.865 2.293c1.863-1.186 7.409-1.186 9.27 0 .363.23.828 1.158 1.255 2.294H3.611c.425-1.136.891-2.063 1.253-2.294zM2.682 8.325c0-.767.643-1.387 1.435-1.387.794 0 1.436.62 1.436 1.387S4.91 9.713 4.117 9.713c-.792 0-1.435-.621-1.435-1.388zm12.22 1.388c-.793 0-1.436-.621-1.436-1.388 0-.767.643-1.387 1.436-1.387.793 0 1.435.62 1.435 1.387s-.643 1.388-1.435 1.388z"
+                                    fill="#CA1016" />
+                            </svg>
+                            <h3>Bütün markalar</h3>
+                        </div>
+                        <span id="markalar-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 10">
+                                <path fill="#B1B5C7" fill-rule="nonzero"
+                                    d="M1.45 0 0 1.457 8.5 10 17 1.457 15.55 0 8.5 7.085z" />
+                            </svg></span>
+                    </div>
+                    <div id="filterler-mobile" onclick="allFilter()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="27" viewBox="-5 -5 29 27" x="675"
+                            y="313">
+                            <path
+                                d="M9.216 8.687v6.891A.42.42 0 009.64 16a.42.42 0 00.422-.422v-6.89a2.145 2.145 0 001.72-2.1 2.145 2.145 0 00-1.72-2.099V1.422A.42.42 0 009.639 1a.42.42 0 00-.423.422v3.067a2.145 2.145 0 00-1.72 2.1c0 1.033.738 1.902 1.72 2.098zm.423-3.395c.716 0 1.298.581 1.298 1.296a1.298 1.298 0 01-2.597 0c0-.715.582-1.296 1.299-1.296zm5.573 6.931v3.355a.42.42 0 00.422.422.42.42 0 00.423-.422v-3.355a2.145 2.145 0 001.72-2.099 2.145 2.145 0 00-1.72-2.099V1.422A.42.42 0 0015.634 1a.42.42 0 00-.422.422v6.606a2.145 2.145 0 00-1.72 2.1c0 1.037.74 1.899 1.72 2.095zm.422-3.395c.717 0 1.299.581 1.299 1.296a1.298 1.298 0 01-2.597 0 1.3 1.3 0 011.298-1.296zM3.22 12.224v3.354a.42.42 0 00.423.422.42.42 0 00.422-.422v-3.354a2.145 2.145 0 001.72-2.098 2.145 2.145 0 00-1.72-2.1V1.423A.42.42 0 003.643 1a.42.42 0 00-.422.422V8.03a2.139 2.139 0 000 4.194zm.423-3.395c.716 0 1.298.581 1.298 1.297a1.298 1.298 0 01-2.596 0c0-.716.581-1.297 1.298-1.297z"
+                                fill="#CA1016" stroke="#CA1016" stroke-width=".8" />
+                        </svg>
+                        <h3>Filtrlər</h3>
+                    </div>
+                    <div id="moto-mobile">
+                        <h3>Moto</h3>
+                        <img src="img/icon-arrow--right--gray-9e53d7f3ad0a5f4cd3ae5664f46954c300fc46fffda7fe4a3a8b3c081a7c32e7.svg"
+                            alt="right-arrow">
+                    </div>
+                    <div class="yeni-elan-mobile">
+                        <h3>Bu gün:</h3>
+                        <a href="">1672 yeni elan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- M O B I L E   O P E N   H E A D A E R -->
+        <div id="open-mobile-header">
+            <div class="container">
+                <div id="open-mobile-header-first">
+                    <span onclick="leave()" id="left-arrow">❮</span>
+                    <h3>Marka</h3>
+                </div>
+                <input oninput="searchModel()" class="searchCars" id="searchCarsModel" type="text" placeholder="Məsələn, BMW">
+            </div>
+            <hr />
+            <div id="open-header-cars-section">
+                <h4>Bütün markalar</h4>
+                <div id="open-header-cars"></div>
+            </div>
+        </div>
+
+        <!-- M O B I L E   O P E N   F I L T E R  -->
+        
+        <div id="filtir">
+            <div id="butun-markalar-txt" style="display: flex; width: 53vw; padding: 20px; justify-content: space-between;" >
+                <a href="" onclick="leaveF()"><i  class="fa-solid fa-chevron-left"></i></a>
+                <p style="text-align: center !important;">Filtrlər</p>
+            </div>
+            <div style="width: 90vw; margin: auto;" id="filtr-input">
+                <select class="searchCars" style="margin: 10px 0 40px 0; pointer-events: none;"><option value="">Şəhər</option></select>
+            </div>
+            <div id="marka-ve-model">
+                <p>Marka və Model</p>
+            </div>
+            <div id="filtir-img">
+                <div id="filtir-img-first-child">
+                    <div class="filtrimg-element" style="margin-top: -20px;">
+                        <img class="width"   src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F52%2Fc0231997-84f3-4e49-8a46-15d634db7502%2Fmercedes-benz-9%4054x.png" alt="">
+                        <p>Mercedes</p>
+                    </div>
+                    <div class="filtrimg-element">
+                        <img class="width" src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F52%2F52%2F3ff4b2cf-b02a-4635-96be-4aa85d7ef6f4%2FBitmap%4054x.png" alt="">
+                        <p>LADA(VAZ)</p>
+                    </div>
+                    <div class="filtrimg-element">
+                        <img class="width" src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F53%2F24%2Fc163753b-fe58-4501-9b34-8b26ad3cf092%2Fhyundai-motor-company-2%20copy%4054x.png" alt="">
+                        <p>Hyundai</p>
+                    </div>
+                    <div class="filtrimg-element" style="margin-top: 15px;">
+                        <img class="width" src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F50%2F49%2F936b5858-fc12-4591-b7b0-5ab6185901f1%2F1280px-KIA_logo3.svg%4054x.png" alt="">
+                        <p>Kia</p>
+                    </div>
+                </div>
+                <div id="filtir-img-last-child">
+                    <div class="filtrimg-element" style="margin-top: 10px;">
+                        <img class="width"   src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F54%2F44%2F9d109024-d1c6-436c-a735-865be0b23edc%2Ftoyota%20copy%203%4054x.png" alt="">
+                        <p>Toyota</p>
+                    </div>
+                    <div class="filtrimg-element">
+                        <img class="width" src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F49%2F07%2F31cc0b93-8144-4916-8a21-919d963d0525%2F1200px-BMW_logo_%28gray%29.svg%4054x.png" alt="">
+                        <p>BMW</p>
+                    </div>
+                    <div class="filtrimg-element" style="margin-top: 10px;">
+                        <img class="width" src="https://turbo.azstatic.com/uploads/makelogo/2021%2F05%2F18%2F16%2F54%2F26%2F86e211e9-0113-49ae-8785-12a96e1c0acc%2Fopel-2%4054x.png" alt="">
+                        <p>Opel</p>
+                    </div>
+                    <div class="filtrimg-element">
+                        <img class="width" src="https://turbo.azstatic.com/media/W1siZiIsIjIwMTMvMDYvMTQvMjAvNDMvMzMvNDM0L0ZvcmQucG5nIl0sWyJwIiwidGh1bWIiLCI2MHgiXV0?sha=9e1ad2ef45808800" alt="">
+                        <p>Ford</p>
+                    </div>
+                    </div>
+                </div>
+                <div id="filtir-button">
+                    <button>Bütün markaları göstər</button>
+                </div>
+                <div id="filtir-button-second-child">
+                    <button  onclick="colFirst()" id="filtir-button-second-child-first-element">Hamısı</button>
+                    <button onclick="colSecond()" id="filtir-button-second-child-second-element">Yeni</button>
+                    <button onclick="colThird()" id="filtir-button-second-child-last-element">Sürülmüş</button>
+                </div>
+            </div>
+
+
+        <!--D E S K T O P   H E A D E R -->
+
+        <div id="desktop-header">
+            <div class="container">
+                <div id="first-header">
+                    <div id="saytlar-desktop">
+                        <h4>Tap.az</h4>
+                        <h4>Boss.az</h4>
+                        <h4>Boss.az</h4>
+                    </div>
+                    <div id="saytlar-diger">
+                        <ul>
+                            <li><a href="">Dəstək: (012) 505-77-55</a></li>
+                            <li><a href="">Yardım</a></li>
+                            <li><a href="">RU</a></li>
+                            <li><a href=""><i class="fa-solid fa-heart"></i> Seçilmişlər</a></li>
+                            <li><a href=""><i class="fa-solid fa-user"></i> Giriş</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="second-header">
+                <div class="container">
+                    <div id="second-header-container">
+                        <div id="second-header-nav">
+                            <ul>
+                                <li><a href="">TURBO.AZ</a></li>
+                                <li><a href="">Bütün elanlar</a></li>
+                                <li><a href="">Salonlar</a></li>
+                                <li><a href="">Moto</a></li>
+                                <li><a href="">Ehtiyyat hissələri və aksesuarlar</a></li>
+                                <li><a href="">İcarə</a></li>
+                            </ul>
+                        </div>
+                        <div id="second-header-button">
+                            <a href=""><span><i class="fa-solid fa-plus"></i></span> Yeni elan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div id="third-header">
+                    <div id="third-header-inputs-first">
+                        <select onclick="showModelOption()" id="marka">
+                            <option value="Marka">Marka</option>
+                        </select>
+                        <select id="model" class="model-sec">
+                            <option value="Model">Model</option>
+                        </select>
+                        <div id="third-header-buttons">
+                            <button onclick="veziyyetHam()" id="third-header-buttons-first">Hamısı</button>
+                            <button onclick="veziyyetMid()" id="third-header-buttons-middle">Yeni</button>
+                            <button onclick="veziyyetLast()" id="third-header-buttons-last">Sürülmüş</button>
+                        </div>
+                        <select id="seher">
+                            <option value="">Şəhər</option>
+                        </select>
+                    </div>
+                    <div id="third-header-inputs-second">
+                        <div id="third-header-inputs-second-inputs">
+                            <input id="third-header-input-first" type="text" placeholder="Qiymət, min.">
+                            <input id="third-header-input-second" type="text" placeholder="max.">
+                        </div>
+                        <div id="valyuta">
+                            <select id="val">
+                                <option value="">Məz.</option>
+                            </select>
+                            <button onclick="Kredit()" value="Kredit" id="valyuta-kredit">Kredit</button>
+                            <button onclick="Barter()" id="valyuta-barter">Barter</button>
+                        </div>
+                        <div id="bannovu">
+                            <select id="ban">
+                                <option value="ban">Ban novu</option>
+                            </select>
+                        </div>
+                        <div id="section-il">
+                            <select id="il-min">
+                                <option value="min">İl.min</option>
+                            </select>
+                            <select id="il-max">
+                                <option value="max">max.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--U N V I S I B L E   S E C T I O N -->
+                    <div id="open-header">
+                        <div id="open-header-section-first">
+                            <select id="">
+                                <option value="">Reng</option>
+                            </select>
+                            <select id="">
+                                <option value="">Yanacaq Novu</option>
+                            </select>
+                            <select id="">
+                                <option value="">Oturucu</option>
+                            </select>
+                            <select id="">
+                                <option value="">Suretler qutusu</option>
+                            </select>
+                        </div>
+                        <div id="open-header-section-second">
+                            <div id="hecm">
+                                <select id="">
+                                    <option value="">Həcm(sm),min.</option>
+                                </select>
+                                <select id="">
+                                    <option value="">max.</option>
+                                </select>
+                            </div>
+                            <div id="guc">
+                                <input type="text" placeholder="Güc(a.g.), min">
+                                <input type="text" placeholder="max">
+                            </div>
+                            <div id="yurus">
+                                <input type="text" placeholder="Yürüş(km), min">
+                                <input type="text" placeholder="max">
+                            </div>
+                        </div>
+                        <div id="open-header-section-third">
+                            <div id="open-header-button">
+                                <button id="open-button-first">Hamısı</button>
+                                <button>Salonlar</button>
+                                <button id="open-button-last">Şəxsi</button>
+                            </div>
+                            <div id="sahibler">
+                                <select id="">
+                                    <option value="">Sahiblerin sayi</option>
+                                </select>
+                            </div>
+                            <div id="Yerler">
+                                <select id="">
+                                    <option value="">Yerlerin sayi</option>
+                                </select>
+                            </div>
+                            <div id="Bazar">
+                                <select id="">
+                                    <option value="">Hansi bazaar ucun yigilib </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="open-header-section-four">
+                            <button>Vuruğu yoxdur</button>
+                            <button>Rənglənməyib</button>
+                            <button>Yalnız qəzalı avtomobillər</button>
+                            <select id="">
+                                <option value="">Status</option>
+                            </select>
+                        </div>
+                        <div id="open-header-section-five">
+                            <div id="open-header-section-five-top">
+                                <h4>Avtomobil təchizatı</h4>
+                                <div id="line"></div>
+                            </div>
+                            <div id="techizatlar">
+                                <ul>
+                                    <li class="li" onclick="buttonVal(1)">Yüngül lehmli disklər</li>
+                                    <li class="li" onclick="buttonVal(2)">ABS</li>
+                                    <li class="li" onclick="buttonVal(3)">Lyuk</li>
+                                    <li class="li" onclick="buttonVal(4)">Yağış sensoru</li>
+                                    <li class="li" onclick="buttonVal(5)">Mərkəzi qapanma</li>
+                                    <li class="li" onclick="buttonVal(6)">Park radarı</li>
+                                    <li class="li" onclick="buttonVal(7)">Kondisioner</li>
+                                    <li class="li" onclick="buttonVal(8)">Oturacaqların isidilməsi</li>
+                                    <li class="li" onclick="buttonVal(9)">Dəri salon</li>
+                                    <li class="li" onclick="buttonVal(10)">Ksenon lampalar</li>
+                                    <li class="li" onclick="buttonVal(11)">Arxa görüntü kamerası</li>
+                                    <li class="li" onclick="buttonVal(12)">Yan pərdələr</li>
+                                    <li class="li" onclick="buttonVal(13)">Oturacaqların ventilyasiyası</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="open-header-section-last">
+                        <div class="yeni-elan-mobile">
+                            <h3>Bu gün:</h3>
+                            <a href="">1672 yeni elan</a>
+                        </div>
+                        <div id="unvisible-buttons-section">
+                            <span onclick="rem()">Sıfırla</span>
+                            <span onclick="hide()" id="hide-header">Daha çox filtr ˅</span>
+                            <button onclick="showCars()" id="show-ads">Elanlar göstər</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="cars-place">
+                <div id="cars-place-cards">
+                    <div id="premium">
+                        <div id="premium-text">
+                            <h4>PREMIUM ELANLAR</h4>
+                        </div>
+                        <div id="premium-img"><img src="img/kaptext.png" alt="birbank"></div>
+                    </div>
+                    <div id="cars-card"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="Javascript/script.js"></script>
+    <script src="Javascript/object.js"></script>
+    <script src="Javascript/mobileHeaderMarka.js"></script>
+    <script src="Javascript/filterOpen.js"></script>
+</body>
+
+</html>
